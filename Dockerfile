@@ -2,7 +2,8 @@ FROM alpine:latest
 
 LABEL author="hurisheng"
 
-RUN apk update && apk add openvpn
+# only openvpn package is required, bach is for cloud service only
+RUN apk update && apk add openvpn bash
 
 # copy openvpn-start.sh script
 COPY ./openvpn-start.sh /usr/local/bin

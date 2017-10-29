@@ -8,6 +8,6 @@ if [ ! -c /dev/net/tun ]; then
     chmod 0666 /dev/net/tun
 fi
 
-iptables -t nat -A POSTROUTING -s 172.88.0.0/16 -j MASQUERADE
+iptables -t nat -A POSTROUTING -s ${VPN_NETWORK} -j MASQUERADE
 
 openvpn --cd /etc/openvpn --config server.conf

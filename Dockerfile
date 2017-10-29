@@ -7,7 +7,9 @@ RUN apk update && apk add openvpn bash
 
 # copy openvpn-start.sh script
 COPY ./openvpn-start.sh /usr/local/bin
-CMD [ "openvpn-start.sh" ]
 
+ENV VPN_NETWORK="172.88.0.0/16"
 EXPOSE 1194/UDP
 VOLUME [ "/etc/openvpn" ]
+
+CMD [ "openvpn-start.sh" ]

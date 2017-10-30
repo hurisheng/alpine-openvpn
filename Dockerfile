@@ -10,6 +10,6 @@ COPY ./openvpn-start.sh /usr/local/bin
 
 ENV VPN_NETWORK="172.88.0.0/16"
 EXPOSE 1194/UDP
-VOLUME [ "/etc/openvpn" ]
+VOLUME ["/etc/openvpn"]
 
-CMD [ "openvpn-start.sh" ]
+CMD ["openvpn-start.sh"]

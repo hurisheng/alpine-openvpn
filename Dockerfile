@@ -3,7 +3,7 @@ FROM alpine:3.7
 LABEL author="hurisheng"
 
 # only openvpn package is required, bash is for cloud service only
-RUN apk add --no-cache bash openvpn
+RUN apk add --no-cache bash openvpn openvpn-auth-ldap
 
 # copy openvpn-start.sh script
 COPY ./openvpn-start.sh /usr/local/bin/

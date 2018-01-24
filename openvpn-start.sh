@@ -10,4 +10,4 @@ fi
 
 iptables -t nat -A POSTROUTING -s ${VPN_NETWORK} -j MASQUERADE
 
-openvpn --cd /etc/openvpn --config server.conf
+openvpn --cd /etc/openvpn --config server.conf --server ${SERVER_NETWORK}

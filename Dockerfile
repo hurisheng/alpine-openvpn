@@ -8,8 +8,8 @@ RUN apk add --no-cache bash openvpn openvpn-auth-ldap
 # copy openvpn-start.sh script
 COPY ./openvpn-start.sh /usr/local/bin/
 
-ENV VPN_NETWORK="172.88.0.0/16"
-ENV SERVER_NETWORK = "172.88.0.0 255.255.0.0"
+ENV VPN_NETWORK_ADDRESS="172.88.0.0"
+ENV VPN_NETWORK_MASK = "255.255.0.0"
 EXPOSE 1194/UDP
 VOLUME ["/etc/openvpn"]
 

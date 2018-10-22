@@ -1,0 +1,1 @@
+auth      required     pam_mysql.so    config_file=/etc/openvpn/pam_mysql.conf

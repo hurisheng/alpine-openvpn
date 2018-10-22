@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
 
 # copy openvpn-start.sh script
 COPY ./openvpn-start.sh /usr/local/bin/
+COPY ./openvpn /etc/pam.d
 
 ENV VPN_NETWORK_ADDRESS="172.88.0.0"
 ENV VPN_NETWORK_MASK="255.255.0.0"

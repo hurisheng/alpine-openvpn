@@ -7,7 +7,6 @@ RUN apt-get update && apt-get install -y \
   bash \
   openvpn \
   iptables \
-  openvpn-auth-ldap \
   libpam-mysql \
   && rm -rf /var/lib/apt/lists/*
 

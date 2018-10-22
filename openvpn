@@ -1,2 +1,2 @@
-auth      required     pam_mysql.so    config_file=/etc/openvpn/pam_mysql.conf
-account   required     pam_mysql.so    config_file=/etc/openvpn/pam_mysql.conf
+auth      required     pam_mysql.so    config_file=/etc/openvpn/pam-mysql.conf
+account   required     pam_mysql.so    config_file=/etc/openvpn/pam-mysql.conf

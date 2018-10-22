@@ -6,7 +6,6 @@ LABEL author="hurisheng"
 RUN apt-get update && apt-get install -y \
   bash \
   openvpn \
-  openvpn-auth-ldap \
   iptables \
   libpam-mysql \
   && rm -rf /var/lib/apt/lists/*

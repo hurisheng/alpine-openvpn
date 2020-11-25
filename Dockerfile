@@ -1,4 +1,4 @@
-FROM debian:10-slim
+FROM debian:9-slim
 
 LABEL author="hurisheng"
 
@@ -8,9 +8,9 @@ RUN apt-get update && apt-get install -y \
   openvpn \
   openvpn-auth-ldap \
   iptables \
-  && rm -rf /var/lib/apt/lists/* \
   && ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-  && dpkg-reconfigure -f noninteractive tzdata
+  && dpkg-reconfigure -f noninteractive tzdata \
+  && rm -rf /var/lib/apt/lists/*
 
 # copy openvpn-start.sh script
 COPY ./openvpn-start.sh /usr/local/bin/

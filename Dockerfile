@@ -6,7 +6,6 @@ LABEL author="hurisheng"
 RUN apt-get update && apt-get install -y \
   bash \
   openvpn \
-  openvpn-auth-ldap \
   iptables \
   && ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
   && dpkg-reconfigure -f noninteractive tzdata \

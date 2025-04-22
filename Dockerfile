@@ -1,4 +1,4 @@
-FROM debian:12-slim
+FROM debian:9-slim
 
 LABEL author="hurisheng"
 

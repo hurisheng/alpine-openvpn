@@ -1,15 +1,9 @@
-FROM debian:9-slim
+FROM alpine:latest
 
 LABEL author="hurisheng"
 
 # only openvpn package is required, bash is for cloud service only
-RUN apt-get update && apt-get install -y \
-  bash \
-  openvpn \
-  iptables \
-  && ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-  && dpkg-reconfigure -f noninteractive tzdata \
-  && rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache openvpn
 
 # copy openvpn-start.sh script
 COPY ./openvpn-start.sh /usr/local/bin/

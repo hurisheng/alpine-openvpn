@@ -13,4 +13,6 @@ ENV VPN_NETWORK_MASK="255.255.0.0"
 EXPOSE 1194/UDP
 VOLUME [ "/etc/openvpn" ]
 
+USER nobody:nobody
+
 CMD [ "openvpn-start.sh" ]
